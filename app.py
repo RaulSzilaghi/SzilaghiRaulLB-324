@@ -1,13 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from datetime import datetime
 from dataclasses import dataclass
-import os
-from dotenv import load_dotenv
 
 app = Flask(__name__)
-app.secret_key = os.urandom(24)
-load_dotenv()
-PASSWORD = os.environ.get("PASSWORD", "SzilaghiRaul")
+app.secret_key = "meinGeheimerKey123"
+PASSWORD = "SzilaghiRaul"
 entries = []
 
 
